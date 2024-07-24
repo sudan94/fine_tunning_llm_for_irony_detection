@@ -35,7 +35,9 @@ The fine-tuning scripts are provided as Jupyter notebooks and can be run on Goog
 
 5. **Run the Notebook**: Execute the cells in the notebook sequentially. Follow any additional instructions provided in the notebook.
 
+## Data Source
 
+This repository includes the dataset from the paper "[Sentiment Analysis in the Era of Large Language Models: A Reality Check](https://arxiv.org/abs/2305.15005)" originally available in the [LLM-Sentiment](https://github.com/DAMO-NLP-SG/LLM-Sentiment) repository by [DAMO-NLP-SG](https://github.com/DAMO-NLP-SG).
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
