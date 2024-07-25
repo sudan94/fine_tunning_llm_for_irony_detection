@@ -1,8 +1,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Load your original dataset
-original_data = pd.read_csv("merged.csv", encoding='utf-8')
+# Load your original dataset here (e.g., irony_dataset.csv)
+original_data = pd.read_csv("irony_dataset.csv", encoding='utf-8')
 
 # Split the dataset into train (80%) and temp (20%)
 train_data, temp_data = train_test_split(original_data, test_size=0.2, random_state=42)

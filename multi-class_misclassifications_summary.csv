@@ -1,0 +1,13 @@
+model_name,num_misclassifications
+bert_set1_lora,151
+bert_set1_qlora,141
+bert_set2_lora,217
+bert_set2_qlora,210
+distillbert_set1_lora,150
+distillbert_set1_qlora,142
+distillbert_set2_lora,175
+distillbert_set2_qlora,166
+flan-t5_set1_lora,161
+flan-t5_set1_qlora,105
+flan-t5_set2_lora,215
+flan-t5_set2_qlora,210

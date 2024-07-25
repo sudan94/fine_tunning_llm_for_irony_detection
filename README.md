@@ -1,6 +1,10 @@
-# Fine Tuning LLM for Irony Detection - Master Thesis
+# Fine Tuning LLM for Irony Detection
 
 This project focuses on fine-tuning Large Language Models (LLMs) for the task of irony detection. The models are trained and evaluated using both binary and multi-class classification tasks.
+
+## Data Source
+
+This repository includes the dataset from the paper "[Sentiment Analysis in the Era of Large Language Models: A Reality Check](https://arxiv.org/abs/2305.15005)" originally available in the [LLM-Sentiment](https://github.com/DAMO-NLP-SG/LLM-Sentiment) repository by [DAMO-NLP-SG](https://github.com/DAMO-NLP-SG).
 
 ## Project Structure
 
@@ -18,6 +22,24 @@ This project focuses on fine-tuning Large Language Models (LLMs) for the task of
   - **binary/**: Results for binary classification.
   - **multi-class/**: Results for multi-class classification.
 
+- **training-evaluation-results/**: Contains evaluation results for the fine-tuned models.
+  - **binary/**: Evaluation results for binary classification.
+  - **multi-class/**: Evaluation results for multi-class classification.
+
+- **lora-heatmap.py**: Script to generate heatmaps for LoRA results.
+
+- **lora-plot.py**: Script to generate plots for LoRA results.
+
+- **Qlora-heatmap.py**: Script to generate heatmaps for qLoRA results.
+
+- **Qlora-plot.py**: Script to generate plots for qLoRA results.
+
+- **misclassifications_summary.py**: Script to summarize misclassifications.
+
+- **binary_misclassifications_summary.csv**: Summary of misclassifications for binary classification.
+
+- **multi-class_misclassifications_summary.csv**: Summary of misclassifications for multi-class classification.
+
 
 ## How to Use
 
@@ -33,11 +55,25 @@ The fine-tuning scripts are provided as Jupyter notebooks and can be run on Goog
 
 4. **Create Hugginface account**: Create a hugginface account and get the API key for accessing the models. Make sure to add the dataset `train.csv`, `test.csv`, and `validation.csv` to the Huggingface dataset platform to access through its library.
 
+5. **Change the dataset name**: Replace "sudan94/SemEvalEmoji2018Binary" with your dataset's repository name.
+```python
+  dataset = load_dataset("sudan94/SemEvalEmoji2018Binary")
+```
+Example :
+  ```python
+    dataset = load_dataset("your_username/your_dataset_name")
+```
+
 5. **Run the Notebook**: Execute the cells in the notebook sequentially. Follow any additional instructions provided in the notebook.
 
-## Data Source
+### Running Other Scripts
 
-This repository includes the dataset from the paper "[Sentiment Analysis in the Era of Large Language Models: A Reality Check](https://arxiv.org/abs/2305.15005)" originally available in the [LLM-Sentiment](https://github.com/DAMO-NLP-SG/LLM-Sentiment) repository by [DAMO-NLP-SG](https://github.com/DAMO-NLP-SG).
+For running other python scripts just use the command line
+Example:
+
+```shell
+python misclassifications_summary.py
+```
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
